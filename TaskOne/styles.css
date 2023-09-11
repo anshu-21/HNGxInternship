@@ -1,0 +1,24 @@
+main {
+  width: 20rem;
+  margin: auto;
+  margin-top: 5rem;
+  border: 2px solid gray;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+button {
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 0.7rem;
+}
