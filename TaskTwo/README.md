@@ -36,7 +36,7 @@ Start the server
   npm run dev
 ```
 
-## API Reference
+## TMDB API Reference
 
 #### Get a list of specific type(toprated/popular) of movies
 
