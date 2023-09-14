@@ -15,13 +15,13 @@ https://moviebox-drab.vercel.app/
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/anshu-21/HNGxInternship.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd TaskTwo
 ```
 
 Install dependencies
@@ -36,7 +36,7 @@ Start the server
   npm run dev
 ```
 
-## API Reference
+## TMDB API Reference
 
 #### Get a list of specific type(toprated/popular) of movies
 
