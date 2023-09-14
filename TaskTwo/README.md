@@ -8,7 +8,7 @@ It's a website that provides comprehensive movie data and allows movie enthusias
 
 ## Demo
 
-https://moviebox-drab.vercel.app/
+https://moviebox-flax.vercel.app/
 
 ## Run Locally
 
