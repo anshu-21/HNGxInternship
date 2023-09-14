@@ -4,10 +4,8 @@ import MovieCard from "./MovieCard";
 
 const MovieList = () => {
   const [movieList, setMovieList] = useState([]);
-
-  useEffect(() => {
-    fetchTopRatedMoviesData();
-  }, []);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchTopRatedMoviesData = async () => {
     const API_KEY = "3084365d7a53c4a43a67bbbf2f3b89a3";
@@ -17,19 +15,31 @@ const MovieList = () => {
       const res = await axios.get(url);
       const data = await res.data.results;
       setMovieList(data.slice(0, 10));
+      setLoading(false);
     } catch (error) {
-      console.log(error);
+      setError(error);
+      setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchTopRatedMoviesData();
+  }, []);
 
   return (
     <div className="movie__list">
       <h2 className="list__title">Top Rated</h2>
-      <div className="list__cards">
-        {movieList.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </div>
+      {loading ? (
+        <p>Movie List Loading...</p>
+      ) : error ? (
+        <p>Error: {`${error.message}. Can not fetch the movies list.`}</p>
+      ) : (
+        <div className="list__cards">
+          {movieList.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

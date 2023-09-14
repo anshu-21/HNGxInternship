@@ -7,6 +7,9 @@ import { Carousel } from "react-responsive-carousel";
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const fetchPopularMoviesData = async () => {
     const API_KEY = "3084365d7a53c4a43a67bbbf2f3b89a3";
     const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US`;
@@ -15,8 +18,10 @@ const Home = () => {
       const res = await axios.get(url);
       const data = await res.data.results;
       setPopularMovies(data.slice(0, 10));
+      setLoading(false);
     } catch (error) {
-      console.log(error);
+      setError(error);
+      setLoading(false);
     }
   };
 
@@ -61,17 +66,23 @@ const Home = () => {
 
   return (
     <>
-      <div className="poster">
-        <Carousel
-          showThumbs={false}
-          autoPlay={true}
-          transitionTime={3}
-          infiniteLoop={true}
-          showStatus={false}
-        >
-          {poster}
-        </Carousel>
-      </div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>Error: {`${error.message}. Can not fetch the movie data.`}</p>
+      ) : (
+        <div className="poster">
+          <Carousel
+            showThumbs={false}
+            autoPlay={true}
+            transitionTime={3}
+            infiniteLoop={true}
+            showStatus={false}
+          >
+            {poster}
+          </Carousel>
+        </div>
+      )}
       <MovieList />
     </>
   );

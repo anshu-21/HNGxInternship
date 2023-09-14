@@ -9,7 +9,7 @@ const MovieCard = ({ movie }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 1500);
   }, []);
 
   const posterImageSrc =
