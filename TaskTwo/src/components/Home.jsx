@@ -32,7 +32,7 @@ const Home = () => {
   const poster = popularMovies.map((movie) => (
     <Link
       style={{ textDecoration: "none", color: "white" }}
-      to={`/movie/${movie.id}`}
+      to={`/movies/${movie.id}`}
       key={movie.id}
     >
       <div className="posterImage" data-testid="movie-poster">
