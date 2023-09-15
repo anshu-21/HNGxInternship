@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -20,7 +21,7 @@ const MovieCard = ({ movie }) => {
   return (
     <>
       {isLoading ? (
-        <div className="movieCards" data-testid="movie-card">
+        <div className="movieCards" data-testid:movie-card>
           <SkeletonTheme>
             <Skeleton />
           </SkeletonTheme>
@@ -30,20 +31,17 @@ const MovieCard = ({ movie }) => {
           to={`/movies/${movie.id}`}
           style={{ textDecoration: "none", color: "white" }}
         >
-          <div className="movieCards" data-testid="movie-card">
+          <div className="movieCards" data-testid:movie-card>
             <img
-              data-testid="movie-poster"
+              data-testid:movie-poster
               className="cards__img"
               src={posterImageSrc}
             />
             <div className="cards__overlay">
-              <div className="card__title" data-testid="movie-title">
+              <div className="card__title" data-testid:movie-title>
                 {movie ? movie.title : ""}
               </div>
-              <div
-                className="card__releaseDate"
-                data-testid="movie-release-date"
-              >
+              <div className="card__releaseDate" data-testid:movie-release-date>
                 {movie ? movie.release_date : ""}
                 <span className="card__rating">
                   {movie ? movie.vote_average : ""}

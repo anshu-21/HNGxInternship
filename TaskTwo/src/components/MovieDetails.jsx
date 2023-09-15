@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -85,7 +86,7 @@ const Movie = () => {
             </div>
             <div className="movie__detailRight">
               <div className="movie__detailRightTop">
-                <div className="movie__title" data-testid="movie-title">
+                <div className="movie__title" data-testid:movie-title>
                   {currentMovieDetail ? currentMovieDetail.original_title : ""}
                 </div>
                 <div className="movie__tagline">
@@ -100,14 +101,14 @@ const Movie = () => {
                       : ""}
                   </span>
                 </div>
-                <div className="movie__runtime" data-testid="movie-runtime">
+                <div className="movie__runtime" data-testid:movie-runtime>
                   {currentMovieDetail
                     ? currentMovieDetail.runtime + " mins"
                     : ""}
                 </div>
                 <div
                   className="movie__releaseDate"
-                  data-testid="movie-release-date"
+                  data-testid:movie-release-date
                 >
                   {currentMovieDetail
                     ? "Release date: " + currentMovieDetail.release_date
@@ -127,7 +128,7 @@ const Movie = () => {
               </div>
               <div className="movie__detailRightBottom">
                 <div className="overview">Overview</div>
-                <div data-testid="movie-overview">
+                <div data-testid:movie-overview>
                   {currentMovieDetail ? currentMovieDetail.overview : ""}
                 </div>
                 <button
