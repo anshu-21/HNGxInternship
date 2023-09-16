@@ -36,7 +36,7 @@ const Home = () => {
       to={`/movies/${movie.id}`}
       key={movie.id}
     >
-      <div className="posterImage" data-testid:movie-poster>
+      <div className="posterImage" data-testid="movie-poster">
         <img
           src={`https://image.tmdb.org/t/p/original${
             movie && movie.backdrop_path
@@ -45,12 +45,12 @@ const Home = () => {
         />
       </div>
       <div className="posterImage__overlay">
-        <div className="posterImage__title" data-testid:movie-title>
+        <div className="posterImage__title" data-testid="movie-title">
           {movie ? movie.title : ""}
         </div>
         <div
           className="posterImage__releaseDate"
-          data-testid:movie-release-date
+          data-testid="movie-release-date"
         >
           {movie ? movie.release_date : ""}
           <span className="posterImage__rating">
