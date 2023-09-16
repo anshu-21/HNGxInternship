@@ -8,7 +8,7 @@ It's a website that provides comprehensive movie data and allows movie enthusias
 
 ## Demo
 
-https://moviebox-gray.vercel.app/
+https://moviebox-navy.vercel.app/
 
 ## Run Locally
 
