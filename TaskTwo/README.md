@@ -38,7 +38,7 @@ Start the server
 
 ## TMDB API Reference
 
-#### Get a list of specific type(toprated/popular) of movies
+#### Get a list of specific type(top_rated/popular) of movies
 
 ```http
   https://api.themoviedb.org/3/movie/${type}?api_key=${API_KEY}&language=en-US
