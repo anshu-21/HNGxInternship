@@ -8,7 +8,7 @@ It's a website that provides comprehensive movie data and allows movie enthusias
 
 ## Demo
 
-https://moviebox-navy.vercel.app/
+https://moviebox-cyan-three.vercel.app/
 
 ## Run Locally
 
