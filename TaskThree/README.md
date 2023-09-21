@@ -27,7 +27,7 @@ for more info visit https://firebase.google.com/docs/auth/web/start
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/anshu-21/HNGxInternship.git
 ```
 
 Go to the project directory
