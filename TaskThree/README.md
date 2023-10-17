@@ -16,6 +16,10 @@ unleashing your creative spirit through the lens.
 
 https://photify-five.vercel.app/
 
+dummy credentials :-<br/>
+email: test@mail.com<br/>
+password: 123456
+
 ## Installation
 
 Use firebase for user authentication.
